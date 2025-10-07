@@ -88,11 +88,19 @@ cd frontend
 # Install dependencies
 npm install
 
+# Create .env file (optional - uses proxy by default)
+cp .env.example .env
+
+# Edit .env if needed
+# REACT_APP_API_URL=http://localhost:5000/api
+
 # Start development server
 npm start
 \`\`\`
 
 Frontend will run on `http://localhost:3000`
+
+**Note:** In development, the frontend uses a proxy to the backend (localhost:5000). For production deployments, set `REACT_APP_API_URL` to your backend server URL.
 
 ## 📁 Project Structure
 

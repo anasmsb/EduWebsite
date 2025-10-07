@@ -108,7 +108,14 @@ JWT_EXPIRE=7d
 ```
 
 ### Frontend Configuration
-The frontend automatically proxies API requests to `http://localhost:5000` during development. For production, update the API URL in the service files.
+Create a `.env` file in the frontend directory (optional):
+
+```env
+# API URL - defaults to '/api' with proxy in development
+REACT_APP_API_URL=http://localhost:5000/api
+```
+
+The frontend automatically proxies API requests to `http://localhost:5000` during development. For production deployments, set `REACT_APP_API_URL` to your backend server URL.
 
 ## 👥 User Roles & Demo Accounts
 

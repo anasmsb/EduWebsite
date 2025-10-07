@@ -76,7 +76,7 @@ const StudentCourse = () => {
                 }}
               >
                 <source 
-                  src={`http://localhost:5000${course.videos[currentVideo].videoUrl}`} 
+                  src={`${process.env.REACT_APP_API_URL?.replace('/api', '') || ''}${course.videos[currentVideo].videoUrl}`} 
                   type="video/mp4" 
                 />
                 Your browser does not support the video tag.
